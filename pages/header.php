@@ -33,10 +33,10 @@
             <!-- <a href="pages/login.php">Logout</a> -->
         </nav>  
         <div class="icons">
-            <a href="" class="fas fa-shopping-cart"></a>
+            <a href="" class="fas fa-heart icon "></a>
             
             <a href="" > 
-                <span class="fas fa-heart icon"></span>
+                <span class="fas fa-shopping-cart "></span>
                 <span class="badge_icon cartbadge" style='<?php 
 
                     if($total_in_cart>0){
@@ -60,7 +60,7 @@
             <ul>
                 <li><a href="">See Profile</a></li>
                 <li><a href="">See Orders</a></li>
-                <li><a href="">logout</a></li>
+                <li><a href=""><span class=""></span> logout</a></li>
             </ul>
         </div>
     </div>

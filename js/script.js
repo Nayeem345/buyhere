@@ -1,22 +1,18 @@
 
 // dropdown menu for profile
 var profile = document.querySelector('.fa-user-circle');
-
 var dropmenu = document.querySelector('.profilemenu');
-
 profile.addEventListener("click", (event) =>{
     event.preventDefault();
     dropmenu.classList.toggle("active");
    
 }); 
 // Cart Dropdown Menu
-// dropdown menu for profile
 var cart = document.querySelector('.fa-shopping-cart');
-
-var dropmenu = document.querySelector('.cartmenu');
-
-cart.addEventListener("click", () =>{
-    dropmenu.classList.toggle("active");
+var dropmenus = document.querySelector('.cartmenu');
+cart.addEventListener("click", (event) =>{
+    event.preventDefault();
+    dropmenus.classList.toggle("active");
    
 });
 // Navbar Fot Mobile And Ipad Device
