@@ -1,7 +1,4 @@
-
-<?php 
-
-include '../database/db.php';
+<?php
 
 $username = $_POST['username'];
 $email = $_POST['email'];
@@ -14,25 +11,20 @@ $dphoneno = $_POST['dphoneno'];
 $photo = $_POST['photo'];
 
 
+include '../database/db.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password,$db);
+$sql= "INSERT INTO `customer` (`id`, `username`, `password`, `email`, `phone_number`, `current_address`, `permanent_address`, `office_addresss`, `delivery_phone_no`, `pro_pic`, `prefered_payment`)
+VALUES('$username','$email','$password','$caddress','$paddress','$oadress','$phoneno','$dphoneno','$photo') ";
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-else{
-  
-  $sql = "INSERT INTO login(username,password) VALUES('$u','$p') ";
-  $result = $conn->query($sql);
+$result = $conn->query($sql);
 
   // die(var_dump($sql));
 
   if ($result) {
 
-    header("location: login_desg.php");
-  } else {
+    echo "Sigunup Successfull";
+  } 
+  else {
     echo "0 results";
   }
 
@@ -40,9 +32,10 @@ else{
 
 
 
-}
+
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +53,7 @@ else{
 <body>
     <!-- Header Section -->
         <?php 
-                include 'header.php'
+                // include 'header.php';
         ?>
 
 
@@ -68,13 +61,13 @@ else{
      <div class="login-form-container">
 
         <!-- <i class="fas fa-times" id="form-close"></i> -->
-        <form action="" method="">
+        
+        <form action="" method="post">
 
             <h3>Sign Up </h3>
-            <input type="email" name="email" id="" class="box" placeholder="Enter your email">
-            <input type="password" name="pass" id="" class="box" placeholder="Enter your password">
             <input type="text" name="username" id="" class="box" placeholder="Enter your username">
-            
+            <input type="email" name="email" id="" class="box" placeholder="Enter your email">
+            <input type="password" name="pass" id="" class="box" placeholder="Enter your password">           
             <input type="text" name="caddress" id="" class="box" placeholder="Enter your current address">
             <input type="text" name="paddress" id="" class="box" placeholder="Enter your permanent address">
             <input type="text" name="oaddress" id="" class="box" placeholder="Enter your office address">

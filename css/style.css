@@ -136,6 +136,12 @@ button:hover{
     font-size: 2rem;
     border-radius: .5rem;
     color: var(--black);
+  
+}
+.header-2 .navbar .btn{
+    margin-left: 75rem;
+    background: var(--black);
+    color: #fff;
 }
 .header-2 .navbar a:hover{
     background-color: var(--green);

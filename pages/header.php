@@ -30,7 +30,7 @@
             <a href="pages/product.php">product</a> -->
             <!-- <a href="pages/deal.php">deal</a>
             <a href="pages/contact">contact</a> -->
-            <!-- <a href="pages/login.php">Logout</a> -->
+            <a  class="btn" style="" href="pages/logout.php">logout</a>
         </nav>  
         <div class="icons">
             <a href="" class="fas fa-heart icon "></a>
@@ -58,7 +58,7 @@
     <div class="profilemenu">
         <div class="profile">
             <ul>
-                <li><a href="">See Profile</a></li>
+                <li><a href="profile.php">See Profile</a></li>
                 <li><a href="">See Orders</a></li>
                 <li><a href=""><span class=""></span> logout</a></li>
             </ul>
@@ -67,8 +67,8 @@
     <div class="cartmenu">
         <div class="cartdiv">
             <ul>
-                <li><a href="">First one</a></li>
-                <li><a href="">See Orders</a></li>
+                <li><a href="">Carts Elements</a></li>
+                <li><a href="">Go to Carts</a></li>
             </ul>
         </div>
     </div>
