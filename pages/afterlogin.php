@@ -4,18 +4,7 @@
 $email = $_POST['email'];
 $password = $_POST['pass'];
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "buyhere";
 
-// // Create connection
-// $conn = new mysqli($servername, $username, $password, $dbname);
-// include '../database/db.php';
-// if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-//  }
-// else{ 
 
 
 

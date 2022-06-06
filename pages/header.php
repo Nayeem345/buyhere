@@ -1,12 +1,14 @@
 <?php 
 
     
+    if(isset($user_id)){
+        $sql = "SELECT * FROM cart WHERE user_id='$user_id'";
+        $result = $conn->query($sql);
+        
+        $total_in_cart = $result->num_rows;
+        // $total_in_cart = 0;
+    }
     
-    $sql = "SELECT * FROM cart WHERE user_id='$user_id'";
-    $result = $conn->query($sql);
-    
-    $total_in_cart = $result->num_rows;
-    // $total_in_cart = 0;
     
 
 
@@ -30,7 +32,25 @@
             <a href="pages/product.php">product</a> -->
             <!-- <a href="pages/deal.php">deal</a>
             <a href="pages/contact">contact</a> -->
+
+            <?php 
+
+                if(isset($user_id)){
+
+
+
+            ?>
             <a  class="btn" style="" href="pages/logout.php">logout</a>
+             <?php 
+                    
+                }
+                else{
+                    
+                
+            ?>
+            <a  class="btn" style="" href="pages/signup.php">signup</a>
+           
+            <?php } ?>
         </nav>  
         <div class="icons">
             <a href="" class="fas fa-heart icon "></a>
@@ -49,8 +69,18 @@
                 
                 ?>'> <?php echo $total_in_cart; ?></span> 
             </a>
+            <?php 
+
+                if(isset($user_id)){
+
+               
             
-            <a href=""  class="fas fa-user-circle"></a>
+            ?>
+            <a href=""  class="fas fa-user-circle profile_avatar" data-id="<?php echo $user_id;?>"></a>
+            <?php 
+            
+                }
+            ?>
         </div>  
             
        </div>

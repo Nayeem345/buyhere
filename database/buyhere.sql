@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2022 at 08:48 AM
+-- Generation Time: Jun 06, 2022 at 11:32 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -70,7 +70,9 @@ INSERT INTO `cart` (`id`, `added_product`, `user_id`) VALUES
 (5, '4', 1),
 (6, '5', 1),
 (7, '8', 1),
-(8, '10', 1);
+(8, '10', 1),
+(9, '4', 2),
+(10, '5', 2);
 
 -- --------------------------------------------------------
 
@@ -115,6 +117,16 @@ CREATE TABLE `customer` (
   `pro_pic` text NOT NULL,
   `prefered_payment` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `username`, `password`, `email`, `phone_number`, `current_address`, `permanent_address`, `office_addresss`, `delivery_phone_no`, `pro_pic`, `prefered_payment`) VALUES
+(1, 'Nayeem', '1234', 'nayeem@gmail.com', 123455677, 'feni', 'fulgazi', 'chhagalnaiya', 12345678, 'ghfgh', '0'),
+(2, 'Niloy', '123456', 'niloy@gmail.com', 123456789, 'feni', 'chhagalnaiya', 'fulgazi', 123456789, 'ghfgh', '0'),
+(3, 'ashik', '1234', 'ashik@gmail.com', 1234567890, 'feni', 'feni', 'feni', 1234567890, 'ghfgh', '0'),
+(9, 'niloy2', '1234', 'niloy2@gmail.com', 2147483647, 'fsd', 'kbhkb', 'bhhkbh', 2147483647, 'ghfgh', '0');
 
 -- --------------------------------------------------------
 
@@ -208,6 +220,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -239,13 +257,19 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `orders`

@@ -1,3 +1,38 @@
+<?php 
+    include './cookie_checker.php';
+    check_login();
+    if(isset($_POST['login'])){
+
+    $email = $_POST['email'];
+    $password = $_POST['pass'];
+    
+    
+    include '../database/db.php';
+    
+    
+    $sql = "SELECT * FROM customer WHERE email='$email' AND password='$password' ";
+    
+    $result = $conn->query($sql);
+    
+      // die(var_dump($sql));
+      if ($result->num_rows > 0) {
+    
+        // output data of each row
+    
+        while($row = $result->fetch_assoc()) {
+           $id = $row['id'];
+        }
+
+        cookie_make($id);
+        header("location: ../index.php?id=".$id);
+
+      } else {
+        echo "0 results";
+      }
+    }
+    else{
+    ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +57,12 @@
      <div class="login-form-container">
 
         <!-- <i class="fas fa-times" id="form-close"></i> -->
-        <form action="afterlogin.php" method="psot">
+        <form action="" method="post">
 
             <h3>Login</h3>
             <input type="email" name="email" id="" class="box" placeholder="enter your email">
             <input type="password" name="pass" id="" class="box" placeholder="enter your password">
-            <input type="submit" value="login now" class="btn">
+            <input type="submit" value="login now" class="btn" name="login">
             <input type="checkbox" name="" id="remember" >
             <label for="remember">remember me</label>
             
@@ -43,3 +78,4 @@
     <script src="..js/script.js"></script>
 </body>
 </html>
+<?php } ?>

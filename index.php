@@ -1,7 +1,11 @@
 <?php 
-
+    
     include 'database/db.php';
-    $user_id = 1;
+
+    if(isset($_GET['id'])){
+        $user_id = $_GET['id'];
+    }
+    
 
 
 ?>
@@ -22,6 +26,7 @@
 </head>
 <body>
     <!-- header h -->
+    
     <?php 
 
         include 'pages/header.php';

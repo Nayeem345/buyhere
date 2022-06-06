@@ -1,36 +1,42 @@
 <?php
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['pass'];
-$caddress = $_POST['caddress'];
-$paddress = $_POST['paddress'];
-$oadress = $_POST['oadress'];
-$phoneno = $_POST['phoneno'];
-$dphoneno = $_POST['dphoneno'];
-$photo = $_POST['photo'];
+if(isset($_POST['signup'])){
 
 
-include '../database/db.php';
-
-$sql= "INSERT INTO `customer` (`id`, `username`, `password`, `email`, `phone_number`, `current_address`, `permanent_address`, `office_addresss`, `delivery_phone_no`, `pro_pic`, `prefered_payment`)
-VALUES('$username','$email','$password','$caddress','$paddress','$oadress','$phoneno','$dphoneno','$photo') ";
-
-$result = $conn->query($sql);
-
-  // die(var_dump($sql));
-
-  if ($result) {
-
-    echo "Sigunup Successfull";
-  } 
-  else {
-    echo "0 results";
-  }
+      $username = $_POST['username'];
+      $email = $_POST['email'];
+      $password = $_POST['pass'];
+      $caddress = $_POST['caddress'];
+      $paddress = $_POST['paddress'];
+      $oadress = $_POST['oaddress'];
+      $phoneno = $_POST['phoneno'];
+      $dphoneno = $_POST['dphoneno'];
+      // $photo = $_POST['photo'];
+      $photo = "ghfgh";
+      $preferred_payment = 0;
 
 
+      include '../database/db.php';
 
+      $sql= "INSERT INTO `customer` (`username`,  `email`,`password`, `phone_number`, `current_address`, `permanent_address`, `office_addresss`, `delivery_phone_no`, `pro_pic`, `prefered_payment`)
+      VALUES('$username','$email','$password','$phoneno','$caddress','$paddress','$oadress','$dphoneno','$photo','$preferred_payment') ";
 
+      
+      $result = $conn->query($sql);
+
+      // var_dump($result);
+      // die();
+
+        if ($result) {
+
+          // header('location : ./login.php');
+          header("location: ./login.php");
+        } 
+        else {
+          echo "0 results";
+        }
+}
+else{
 
 
 
@@ -53,7 +59,7 @@ $result = $conn->query($sql);
 <body>
     <!-- Header Section -->
         <?php 
-                // include 'header.php';
+                include 'header.php';
         ?>
 
 
@@ -75,7 +81,7 @@ $result = $conn->query($sql);
             <input type="text" name="dphoneno" id="" class="box" placeholder="Enter your delivery phone number">
             <label for="file">Upload Your  Photo</label>
             <input type="file" name="photo" id="">
-            <input type="submit" value="Signup now" class="btn">
+            <input type="submit" value="Signup now" class="btn" name="signup">
            
             
             
@@ -92,3 +98,11 @@ $result = $conn->query($sql);
     <script src="..js/script.js"></script>
 </body>
 </html>
+
+<?php 
+
+
+}
+
+
+?>
