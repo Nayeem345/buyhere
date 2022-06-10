@@ -153,10 +153,7 @@ button:hover{
     color: #fff;
     font-size: 1.5rem;
 }
-/* .header-2 .navbar .menubtn .btnl:hover{
-    background-color: var(--green);
-    color: #fff;
-} */
+
 .header-2 .navbar a:hover{
     background-color: var(--green);
     color: #fff;
@@ -738,3 +735,31 @@ button:hover{
 }
 
 /* profile */
+.cust_profile{
+    display: flex; 
+    align-items: center;
+     justify-content: center;
+    font-size: 1.7rem;
+    
+   
+    
+
+}
+.cust_details{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    background: #eef;
+    width: 70rem;
+    border-radius: .5rem;
+    
+}
+.cust_details tr th, td{
+    padding: 1rem;
+}
+/* .cust_details tr th{
+    background: #eee;
+    /* outline: none; */
+   
+} */

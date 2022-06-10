@@ -20,7 +20,41 @@
 <?php 
     include 'header.php';
 ?>
-heiawjpiahfia]
+<!-- Profile Section -->
+<section class="cust_profile">
+    
+    <table class="cust_details">     
+        <tr class="th-heading">
+        <th>Username</th>   <td>Nayeem</td> 
+        </tr> 
+        <tr class="th-heading">
+            <th>Email</th>  <td>nayeem@gmauil.com</td>
+        </tr>  
+        <tr class="th-heading">
+            <th>Password</th>  <td>******</td>
+        </tr> 
+        <tr class="th-heading">
+            <th>Phone Number</th>  <td>0186014547</td>
+
+        </tr> 
+        <tr class="th-heading">
+        <th>Current Address</th>  <td>Chhagalnaiya,Feni.</td>
+        </tr> 
+        <tr class="th-heading">
+         <th>Permanent Address</th> <td>Fulgazi,Feni.</td>
+        </tr> 
+        <tr class="th-heading">
+            <th>Office Address</th> <td>Feni Sadar,Feni.</td>
+        </tr> 
+        <tr class="th-heading">
+            <th>Delivery Phone Number</th>  <td>01546441313</td>
+        </tr>   
+        <tr class="th-heading">
+            <th>Profile Pic</th> <td>Photo</td>
+        </tr>
+
+    </table>
+</section>
 <!-- Footer Section -->
 <?php 
     include 'footer.php';

@@ -102,7 +102,7 @@
     <div class="profilemenu">
         <div class="profile">
             <ul>
-                <li><a href="profile.php" > <span class="fa fa-user"></span> See Profile</a></li>
+                <li><a href="pages/profile.php" > <span class="fa fa-user"></span> See Profile</a></li>
                 <li><a href="" > <span class="fab fa-jedi-order"></span> See Orders</a></li>
                 <li><a href=""> <span class="fas fa-sign-out-alt"  aria-hidden="true"></span> logout</a></li>
             </ul>
