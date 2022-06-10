@@ -26,6 +26,8 @@ menuBtn.addEventListener("click", () =>{
 window.onscroll = () => {
     menuBtn.classList.remove("fa-times");
     navbar.classList.remove("active");
+    dropmenus.classList.remove("active");
+    dropmenu.classList.remove("active");
   
     
 

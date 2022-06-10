@@ -1,3 +1,5 @@
+
+   
 <?php 
     include './cookie_checker.php';
     check_login();
@@ -78,4 +80,7 @@
     <script src="..js/script.js"></script>
 </body>
 </html>
-<?php } ?>
+
+      <?php
+            } 
+      ?>

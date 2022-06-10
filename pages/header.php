@@ -15,7 +15,7 @@
 ?>
 <header>
        <div class="header-1">
-       <a href="../index.php" class="logo"><i class="fas fa-shopping-basket"></i>Buyhere</a>
+       <a href="index.php" class="logo"><i class="fas fa-shopping-basket"></i>Buyhere</a>
             <form class="search-box-container">
                 <input type="search" id="search-box" placeholder="search here....">
                 <label for="search-box" class="fas fa-search"></label>
@@ -32,6 +32,7 @@
             <a href="pages/product.php">product</a> -->
             <!-- <a href="pages/deal.php">deal</a>
             <a href="pages/contact">contact</a> -->
+            <div class="menubtn">
 
             <?php 
 
@@ -40,7 +41,7 @@
 
 
             ?>
-            <a  class="btn" style="" href="pages/logout.php">logout</a>
+            <a  class="btnl" href="index.php">logout</a>
              <?php 
                     
                 }
@@ -48,9 +49,22 @@
                     
                 
             ?>
-            <a  class="btn" style="" href="pages/signup.php">signup</a>
-           
+            <a  class="btnl"  href="pages/signup.php">signup</a>
             <?php } ?>
+            <?php 
+                if(isset($user_id)){
+
+                }
+                else{
+                    ?>
+                    <a  class="btnl" href="pages/login.php">Login</a>
+               <?php
+                }
+            ?>
+            
+            
+            </div>
+           
         </nav>  
         <div class="icons">
             <a href="" class="fas fa-heart icon "></a>
@@ -88,9 +102,9 @@
     <div class="profilemenu">
         <div class="profile">
             <ul>
-                <li><a href="profile.php">See Profile</a></li>
-                <li><a href="">See Orders</a></li>
-                <li><a href=""><span class=""></span> logout</a></li>
+                <li><a href="profile.php" > <span class="fa fa-user"></span> See Profile</a></li>
+                <li><a href="" > <span class="fab fa-jedi-order"></span> See Orders</a></li>
+                <li><a href=""> <span class="fas fa-sign-out-alt"  aria-hidden="true"></span> logout</a></li>
             </ul>
         </div>
     </div>

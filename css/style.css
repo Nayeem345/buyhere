@@ -138,11 +138,25 @@ button:hover{
     color: var(--black);
   
 }
-.header-2 .navbar .btn{
-    margin-left: 75rem;
-    background: var(--black);
-    color: #fff;
+.header-2 .navbar .menubtn{
+   float: right;
+   margin-left: 70rem;
 }
+.header-2 .navbar .menubtn a{
+    margin-left: 2rem;
+}
+.header-2 .navbar .btnl{
+    
+     /* align-items: center; */
+     background: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem;
+}
+/* .header-2 .navbar .menubtn .btnl:hover{
+    background-color: var(--green);
+    color: #fff;
+} */
 .header-2 .navbar a:hover{
     background-color: var(--green);
     color: #fff;
@@ -165,7 +179,7 @@ button:hover{
 }
 .badge_icon{
     position: absolute;
-    top: 10px;
+    top: 16px;
     right: 15rem; 
     height: 20px;
     width: 20px;
@@ -203,13 +217,14 @@ button:hover{
 }
 .profile{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    padding-top: 4rem;
     justify-content: center;
-    height: 17rem;
+    height: 25rem;
     width: 17rem;
-    border-radius: 1rem;
+    border-radius: .8rem;
     background: #eef;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 .profile ul{
     list-style: none;
@@ -248,14 +263,15 @@ button:hover{
     
 }
 .cartdiv{
+    padding-top: 4rem;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    height: 17rem;
+    height: 25rem;
     width: 17rem;
     border-radius: 1rem;
     background: #eef;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 .cartdiv ul{
     list-style: none;
@@ -710,6 +726,15 @@ button:hover{
     font-size: 5rem;
     color: #fff;
     cursor: pointer;
+}
+.lgaddress {
+    color: #666;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.lgaddress a{
+    color: green;
+    font-weight: bold;
 }
 
 /* profile */

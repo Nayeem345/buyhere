@@ -107,5 +107,9 @@
         align-items: center;
         border-radius: 50%;
     }
+    .header-2 .navbar .menubtn{
+        float: none;
+        margin-left: 0;
+     }
 
 }

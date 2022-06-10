@@ -82,6 +82,7 @@ else{
             <label for="file">Upload Your  Photo</label>
             <input type="file" name="photo" id="">
             <input type="submit" value="Signup now" class="btn" name="signup">
+            <span class="lgaddress">Click Here To <a href="login.php">Login</a></span>
            
             
             
