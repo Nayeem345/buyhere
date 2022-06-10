@@ -673,14 +673,16 @@ button:hover{
 }
 .login-form-container form h3{
     font-size: 3rem;
-     color: #444;
+     color: rgb(8, 8, 8);
      text-transform: uppercase;
      text-align: center;
      padding: 1rem 0;
+     text-decoration: underline;
+     font-style: italic;
 }
 .login-form-container form .box{
     width: 100%;
-    padding: 1rem;
+    padding: .8rem;
     font-size: 1.7rem;
     color: rgb(0, 0, 0);
     margin: .6rem 0;
@@ -740,17 +742,21 @@ button:hover{
     align-items: center;
      justify-content: center;
     font-size: 1.7rem;
+    flex-flow: column;
     
-   
-    
-
+}
+.cust_profile h2{
+    text-decoration: underline;
+    color: #444;
+    font-style: italic;
+    font-size: 4rem;
 }
 .cust_details{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     text-align: left;
-    justify-content: center;
-    background: #eef;
+    /* justify-content: center; */
+    /* background: #eef; */
     width: 70rem;
     border-radius: .5rem;
     
@@ -758,8 +764,3 @@ button:hover{
 .cust_details tr th, td{
     padding: 1rem;
 }
-/* .cust_details tr th{
-    background: #eee;
-    /* outline: none; */
-   
-} */

@@ -22,6 +22,7 @@
 ?>
 <!-- Profile Section -->
 <section class="cust_profile">
+    <h2>Customer Profile </h2>
     
     <table class="cust_details">     
         <tr class="th-heading">
@@ -52,8 +53,10 @@
         <tr class="th-heading">
             <th>Profile Pic</th> <td>Photo</td>
         </tr>
+       
 
     </table>
+    <a href="profile_update.php" class="btn">Update Profile</a>
 </section>
 <!-- Footer Section -->
 <?php 
