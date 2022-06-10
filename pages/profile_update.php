@@ -1,48 +1,3 @@
-<?php
-
-if(isset($_POST['signup'])){
-
-
-      $username = $_POST['username'];
-      $email = $_POST['email'];
-      $password = $_POST['pass'];
-      $caddress = $_POST['caddress'];
-      $paddress = $_POST['paddress'];
-      $oadress = $_POST['oaddress'];
-      $phoneno = $_POST['phoneno'];
-      $dphoneno = $_POST['dphoneno'];
-      // $photo = $_POST['photo'];
-      $photo = "ghfgh";
-      $preferred_payment = 0;
-
-
-      include '../database/db.php';
-
-      $sql= "INSERT INTO `customer` (`username`,  `email`,`password`, `phone_number`, `current_address`, `permanent_address`, `office_addresss`, `delivery_phone_no`, `pro_pic`, `prefered_payment`)
-      VALUES('$username','$email','$password','$phoneno','$caddress','$paddress','$oadress','$dphoneno','$photo','$preferred_payment') ";
-
-      
-      $result = $conn->query($sql);
-
-      // var_dump($result);
-      // die();
-
-        if ($result) {
-
-          // header('location : ./login.php');
-          header("location: ./login.php");
-        } 
-        else {
-          echo "0 results";
-        }
-}
-else{
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,16 +16,14 @@ else{
         <?php 
                 include 'header.php';
         ?>
-
-
-     <!-- Singup Form Container -->
-     <div class="login-form-container">
+        <!-- Singup Form Container -->
+        <div class="login-form-container">
 
         <!-- <i class="fas fa-times" id="form-close"></i> -->
-        
+
         <form action="" method="post">
 
-            <h3>Sign Up </h3>
+            <h3>Update Your Profile </h3>
             <input type="text" name="username" id="" class="box" placeholder="Enter your username">
             <input type="email" name="email" id="" class="box" placeholder="Enter your email">
             <input type="password" name="pass" id="" class="box" placeholder="Enter your password">           
@@ -81,16 +34,12 @@ else{
             <input type="text" name="dphoneno" id="" class="box" placeholder="Enter your delivery phone number">
             <label for="file">Upload Your  Photo</label>
             <input type="file" name="photo" id="">
-            <input type="submit" value="Signup now" class="btn" name="signup">
-            <span class="lgaddress">Click Here To <a href="login.php">Login</a></span>
-           
-            
-            
-          
+            <input type="submit" value="Update" class="btn" name="Update">
+              
         </form>
-    </div>
-     
-     <!-- Footer Section -->
+        </div>
+
+         <!-- Footer Section -->
      <?php 
         include 'footer.php';
      ?>
@@ -99,11 +48,3 @@ else{
     <script src="..js/script.js"></script>
 </body>
 </html>
-
-<?php 
-
-
-}
-
-
-?>
