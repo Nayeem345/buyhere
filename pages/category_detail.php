@@ -1,7 +1,7 @@
 <?php 
 
     include '../database/db.php';
-    $category_id = $_GET['id'];
+    $category_id = $_GET['id']; 
     
 
     // Latest Product finding

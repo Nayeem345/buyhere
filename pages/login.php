@@ -5,32 +5,32 @@
     check_login();
     if(isset($_POST['login'])){
 
-    $email = $_POST['email'];
-    $password = $_POST['pass'];
-    
-    
-    include '../database/db.php';
-    
-    
-    $sql = "SELECT * FROM customer WHERE email='$email' AND password='$password' ";
-    
-    $result = $conn->query($sql);
-    
-      // die(var_dump($sql));
-      if ($result->num_rows > 0) {
-    
-        // output data of each row
-    
-        while($row = $result->fetch_assoc()) {
-           $id = $row['id'];
-        }
+        $email = $_POST['email']; 
+        $password = $_POST['pass'];
+        
+        
+        include '../database/db.php';
+        
+        
+        $sql = "SELECT * FROM customer WHERE email='$email' AND password='$password' ";
+        
+        $result = $conn->query($sql);
+        
+          // die(var_dump($sql));
+          if ($result->num_rows > 0) {
+        
+            // output data of each row
+        
+            while($row = $result->fetch_assoc()) {
+              $id = $row['id'];
+            }
 
-        cookie_make($id);
-        header("location: ../index.php?id=".$id);
+            cookie_make($id);
+            header("location: ../index.php");
 
-      } else {
-        echo "0 results";
-      }
+          } else {
+            echo "0 results";
+          }
     }
     else{
     ?>

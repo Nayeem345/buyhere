@@ -5,8 +5,9 @@
 function check_login(){
     if(isset($_COOKIE['user_id'])){
         $user_id = $_COOKIE['user_id'];
-        header("location: ../index.php?id=".$user_id);
+        header("location: ../index.php");
     }
+    
     
 }
 

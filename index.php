@@ -1,15 +1,16 @@
 <?php 
-    
+    //echo basename($_SERVER['REQUEST_URI']); /// eta url ber korar rule
+    //die();  //// 
     include 'database/db.php';
 
-    if(isset($_GET['id'])){
-        $user_id = $_GET['id'];
+    if(isset($_COOKIE['user_id'])){
+        $user_id = $_COOKIE['user_id'];
     }
     
 
 
 ?>
-<!-- hello there -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
