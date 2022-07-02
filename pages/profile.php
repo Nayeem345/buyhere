@@ -59,36 +59,36 @@ if(isset($_COOKIE['user_id'])){
 ?>
 <!-- Profile Section -->
 <section class="cust_profile">
-    <h2>Customer Profile <?php echo $user_id; ?></h2>
+    <h2>Customer Profile :<?php echo $user_id; ?></h2>
     
     <table class="cust_details">     
         <tr class="th-heading">
-        <th>Username</th>   <td><?php echo $cust_username; ?></td> 
+        <th>Username :</th>   <td><?php echo $cust_username; ?></td> 
         </tr> 
         <tr class="th-heading">
-            <th>Email</th>  <td><?php echo  $cust_email; ?></td>
+            <th>Email :</th>  <td><?php echo  $cust_email; ?></td>
         </tr>  
         <tr class="th-heading">
-            <th>Password</th>  <td><?php echo  $cust_password; ?></td>
+            <th>Password :</th>  <td><?php echo  $cust_password; ?></td>
         </tr> 
         <tr class="th-heading">
-            <th>Phone Number</th>  <td><?php echo  $cust_phone_number; ?></td>
+            <th>Phone Number :</th>  <td><?php echo  $cust_phone_number; ?></td>
 
         </tr> 
         <tr class="th-heading">
-        <th>Current Address</th>  <td><?php echo  $cust_caddress; ?>.</td>
+        <th>Current Address :</th>  <td><?php echo  $cust_caddress; ?>.</td>
         </tr> 
         <tr class="th-heading">
-         <th>Permanent Address</th> <td><?php echo  $cust_paddress; ?></td>
+         <th>Permanent Address :</th> <td><?php echo  $cust_paddress; ?></td>
         </tr> 
         <tr class="th-heading">
-            <th>Office Address</th> <td><?php echo  $cust_oaddress; ?></td>
+            <th>Office Address :</th> <td><?php echo  $cust_oaddress; ?></td>
         </tr> 
         <tr class="th-heading">
-            <th>Delivery Phone Number</th>  <td><?php echo  $cust_delivery_phoneno; ?></td>
+            <th>Delivery Phone Number :</th>  <td><?php echo  $cust_delivery_phoneno; ?></td>
         </tr>   
         <tr class="th-heading">
-            <th>Profile Pic</th> <td><?php echo  $cust_pro_pic; ?></td>
+            <th>Profile Pic :</th> <td><?php echo  $cust_pro_pic; ?></td>
         </tr>
        
 

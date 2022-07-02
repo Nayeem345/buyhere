@@ -1,5 +1,10 @@
 <?php 
+    $myGlobal = $_SERVER['PHP_SELF'];
+    $last_url = explode("/",$myGlobal);
+    $last_page = $last_url[count($last_url)-1];
 
+    
+    
     
     if(isset($user_id)){
         $sql = "SELECT * FROM cart WHERE user_id='$user_id'";
@@ -15,7 +20,7 @@
 ?>
 <header>
        <div class="header-1">
-       <a href="index.php" class="logo"><i class="fas fa-shopping-basket"></i>Buyhere</a>
+       <a href="../index.php" class="logo"><i class="fas fa-shopping-basket"></i>Buyhere</a>
             <form class="search-box-container">
                 <input type="search" id="search-box" placeholder="search here....">
                 <label for="search-box" class="fas fa-search"></label>
@@ -38,27 +43,39 @@
 
                 if(isset($user_id)){
 
-
-
             ?>
             <a  class="btnl" href="./pages/logout.php">logout</a>
              <?php 
                     
                 }
                 else{
+                    if($last_page=='signup.php'){
+
+                    }
+                    else{
                     
                 
             ?>
             <a  class="btnl"  href="pages/signup.php">signup</a>
-            <?php } ?>
+            <?php
+                     }
+                }
+            ?>
             <?php 
                 if(isset($user_id)){
 
                 }
                 else{
-                    ?>
-                    <a  class="btnl" href="pages/login.php">Login</a>
+                    if($last_page=='login.php'){
+
+                    }
+                    else{
+
+                   
+            ?>
+                <a  class="btnl" href="pages/login.php">Login</a>
                <?php
+                    }
                 }
             ?>
             
