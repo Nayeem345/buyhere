@@ -128,8 +128,8 @@
     <div class="cartmenu">
         <div class="cartdiv">
             <ul>
-                <li><a href="">Carts Elements</a></li>
-                <li><a href="">Go to Carts</a></li>
+                <li><a href="./pages/cart_elements.php"><i class="fa fa-cart-plus" aria-hidden="true"></i> Carts Elements</a></li>
+                <li><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> Go to Carts</a></li>
             </ul>
         </div>
     </div>

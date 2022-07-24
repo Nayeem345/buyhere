@@ -249,8 +249,8 @@ button:hover{
 
 /* Cart Dropmenu */
 .cartmenu{
-    position: absolute;
-  
+    position: fixed;
+   z-index: 1000;
     right: 5rem;
     display: none;
 }
